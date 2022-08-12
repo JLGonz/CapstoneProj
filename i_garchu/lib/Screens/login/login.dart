@@ -1,9 +1,19 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:i_garchu/Components/Background.dart';
 import 'package:i_garchu/Components/background.dart';
 import 'package:i_garchu/Screens/register/register.dart';
 
-class LoginScreen extends StatelessWidget {
+import '../../services/fire_auth_service.dart';
+
+class LoginScreen extends StatefulWidget {
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final formKey = GlobalKey<FormState>();
+  final _userNameController = TextEditingController();
+  final _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -31,6 +41,7 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
+                controller: _userNameController,
                 decoration: InputDecoration(labelText: "Username"),
               ),
             ),
@@ -39,6 +50,7 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
+                controller: _passwordController,
                 decoration: InputDecoration(labelText: "Password"),
                 obscureText: true,
               ),
@@ -106,5 +118,26 @@ class LoginScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void signIn(FireAuthService authService) async {
+    // Check if all required fields are filled up
+    if (formKey.currentState!.validate()) {
+      // Sign user in
+      final status = await authService.signIn(
+          _userNameController.text, _passwordController.text);
+      //   if (status is! FirebaseAuthException) {
+      //     // Go back to AuthScreen if operation is successful
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(
+      //         builder: (context) => const AuthScreen(),
+      //       ),
+      //     );
+      //   } else {
+      //     // Show popup if error is returned
+      //   }
+      // }
+    }
   }
 }
