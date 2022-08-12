@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:i_garchu/Components/background.dart';
 import 'package:i_garchu/Screens/register/register.dart';
+import 'package:i_garchu/constants.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -19,9 +22,7 @@ class LoginScreen extends StatelessWidget {
               child: Text(
                 "LOGIN",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF2661FA),
-                    fontSize: 36),
+                    fontWeight: FontWeight.bold, color: color2, fontSize: 36),
                 textAlign: TextAlign.left,
               ),
             ),
@@ -47,7 +48,7 @@ class LoginScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
               child: Text(
                 "Forgot your password?",
-                style: TextStyle(fontSize: 12, color: Color(0xFF2661FA)),
+                style: TextStyle(fontSize: 12, color: color2),
               ),
             ),
             SizedBox(height: size.height * 0.05),
@@ -96,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     // ignore: prefer_const_constructors
-                    color: Color(0xFF2661FA),
+                    color: color2,
                   ),
                 ),
               ),
