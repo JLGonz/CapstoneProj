@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:i_garchu/Components/Background.dart';
 import 'package:i_garchu/Components/background.dart';
 import 'package:i_garchu/Screens/register/register.dart';
 
