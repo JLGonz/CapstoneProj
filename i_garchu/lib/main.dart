@@ -1,7 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:i_garchu/Screens/auth.dart';
 import 'package:i_garchu/Screens/login/login.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -19,7 +25,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xF7C3B1),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      home: AuthScreen(),
     );
   }
 }
