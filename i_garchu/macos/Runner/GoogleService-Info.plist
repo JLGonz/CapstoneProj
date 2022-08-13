@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1015518667902-hq2vq1lrm9opmt7oak7qkj6vq0dqkuvj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1015518667902-hq2vq1lrm9opmt7oak7qkj6vq0dqkuvj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA45ZTAU3Eq5575zYl6FmBCtUIZtR3y20s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1015518667902</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.iGarchu</string>
+	<key>PROJECT_ID</key>
+	<string>igarchu</string>
+	<key>STORAGE_BUCKET</key>
+	<string>igarchu.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1015518667902:ios:521c5d3569fb2a8738642f</string>
+</dict>
+</plist>
