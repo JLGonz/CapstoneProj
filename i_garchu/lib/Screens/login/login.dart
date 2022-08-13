@@ -126,17 +126,16 @@ class _LoginScreenState extends State<LoginScreen> {
       // Sign user in
       final status = await authService.signIn(
           _userNameController.text, _passwordController.text);
-      //   if (status is! FirebaseAuthException) {
-      //     // Go back to AuthScreen if operation is successful
-      //     Navigator.push(
-      //       context,
-      //       MaterialPageRoute(
-      //         builder: (context) => const AuthScreen(),
-      //       ),
-      //     );
-      //   } else {
-      //     // Show popup if error is returned
-      //   }
+      // if (status is! FirebaseAuthException) {
+      //   // Go back to AuthScreen if operation is successful
+      //   Navigator.push(
+      //     context,
+      //     MaterialPageRoute(
+      //       builder: (context) => const AuthScreen(),
+      //     ),
+      //   );
+      // } else {
+      //   // Show popup if error is returned
       // }
     }
   }
